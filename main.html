@@ -1,0 +1,667 @@
+Here is a complete, professional profile landing page HTML document that showcases your skills, links to your project pages, and connects all your social profiles.
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Eliot Vance | Web3 & Automation Portfolio</title>
+  <!-- Google Fonts & Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* custom smooth container */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* header / nav */
+    .navbar {
+      padding: 1.5rem 0 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.8rem;
+      background: linear-gradient(135deg, #1e293b, #3b82f6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #334155;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #2563eb;
+    }
+
+    /* buttons & social icons */
+    .social-icons {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .social-icons a {
+      color: #475569;
+      font-size: 1.4rem;
+      transition: all 0.2s;
+    }
+
+    .social-icons a:hover {
+      color: #2563eb;
+      transform: translateY(-2px);
+    }
+
+    /* Hero section */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      padding: 3rem 0 4rem;
+    }
+
+    .hero-content {
+      flex: 1;
+    }
+
+    .badge {
+      background: #e0f2fe;
+      color: #0284c7;
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 0.25rem 0.9rem;
+      border-radius: 30px;
+      display: inline-block;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .highlight {
+      background: linear-gradient(120deg, #2563eb, #7c3aed);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #334155;
+      max-width: 550px;
+      margin: 1rem 0 1.8rem;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: #0f172a;
+      color: white;
+      padding: 0.8rem 1.8rem;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid #0f172a;
+    }
+
+    .btn-primary:hover {
+      background: #1e293b;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #cbd5e1;
+      color: #1e293b;
+      padding: 0.8rem 1.8rem;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .btn-outline:hover {
+      border-color: #2563eb;
+      color: #2563eb;
+    }
+
+    .hero-avatar {
+      flex: 0.8;
+      text-align: center;
+    }
+
+    .avatar-circle {
+      width: 220px;
+      height: 220px;
+      background: linear-gradient(145deg, #eef2ff, #ffffff);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+      margin: 0 auto;
+    }
+
+    .avatar-circle i {
+      font-size: 7rem;
+      color: #2563eb;
+    }
+
+    /* section titles */
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      letter-spacing: -0.01em;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 60%;
+      height: 4px;
+      background: #2563eb;
+      border-radius: 4px;
+    }
+
+    /* skills grid */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 2rem 0 3rem;
+    }
+    .skill-tag {
+      background: white;
+      border-radius: 60px;
+      padding: 0.6rem 1.4rem;
+      font-weight: 500;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+      border: 1px solid #e2e8f0;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .skill-tag i {
+      color: #2563eb;
+      font-size: 1rem;
+    }
+    .skill-tag:hover {
+      border-color: #2563eb;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px -8px rgba(37,99,235,0.2);
+    }
+
+    /* project cards (showcasing web3, email automation, etc) */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0 2rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 1.5rem;
+      padding: 1.6rem;
+      transition: all 0.25s ease;
+      border: 1px solid #eef2ff;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.02);
+    }
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: #cbdffc;
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.08);
+    }
+    .project-icon {
+      font-size: 2.2rem;
+      background: #eef2ff;
+      width: 55px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      margin-bottom: 1.2rem;
+      color: #2563eb;
+    }
+    .project-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+    .project-card p {
+      color: #475569;
+      margin-bottom: 1.4rem;
+      font-size: 0.95rem;
+    }
+    .project-link {
+      text-decoration: none;
+      font-weight: 600;
+      color: #2563eb;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s;
+    }
+    .project-link:hover {
+      gap: 10px;
+    }
+
+    /* personality + resume extra */
+    .personality-section {
+      background: #ffffffd9;
+      border-radius: 2rem;
+      padding: 2rem;
+      margin: 2rem 0 3rem;
+      border: 1px solid #e9eef3;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.02);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+    .personality-text {
+      flex: 2;
+    }
+    .personality-text h3 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+    .personality-text p {
+      color: #334155;
+      margin-bottom: 1rem;
+    }
+    .traits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+    .trait {
+      background: #f1f5f9;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    /* footer & social */
+    .footer-social {
+      border-top: 1px solid #e2e8f0;
+      padding: 2rem 0;
+      margin-top: 1rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .copyright {
+      color: #64748b;
+      font-size: 0.85rem;
+    }
+
+    /* responsive */
+    @media (max-width: 850px) {
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+      .hero-content {
+        text-align: center;
+      }
+      .btn-group {
+        justify-content: center;
+      }
+      .navbar {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .section-title:after {
+        left: 20%;
+        width: 60%;
+      }
+    }
+    @media (max-width: 550px) {
+      .container {
+        padding: 0 1.2rem;
+      }
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <!-- navigation with social integrated -->
+  <div class="navbar">
+    <div class="logo">Eliot Vance</div>
+    <div class="nav-links">
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#personality">Personality</a>
+      <div class="social-icons">
+        <a href="https://github.com/eliotvance" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/eliotvance" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com/eliotvance" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com/eliotvance" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero section / resume intro -->
+  <div class="hero">
+    <div class="hero-content">
+      <div class="badge">✦ Web3 Architect & Automation Expert</div>
+      <h1>Building the <span class="highlight">decentralized future</span> <br> with intelligent automation</h1>
+      <p>Hi, I'm Eliot — I craft web3 dApps, email automation systems, and full-stack solutions. 5+ years of engineering experience blending blockchain & AI-driven workflows.</p>
+      <div class="btn-group">
+        <a href="#projects" class="btn-primary"><i class="fas fa-rocket"></i> Explore Projects</a>
+        <a href="#contact" class="btn-outline"><i class="fas fa-paper-plane"></i> Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-avatar">
+      <div class="avatar-circle">
+        <i class="fas fa-code"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills section with personality icons -->
+  <div id="skills">
+    <h2 class="section-title">⚡ Core Expertise & Tech Stack</h2>
+    <div class="skills-grid">
+      <span class="skill-tag"><i class="fab fa-ethereum"></i> Solidity</span>
+      <span class="skill-tag"><i class="fab fa-react"></i> React / Next.js</span>
+      <span class="skill-tag"><i class="fas fa-chart-line"></i> Web3.js / Ethers</span>
+      <span class="skill-tag"><i class="fas fa-envelope-open-text"></i> Email Automation (SendGrid, Make)</span>
+      <span class="skill-tag"><i class="fas fa-database"></i> Node.js / Python</span>
+      <span class="skill-tag"><i class="fas fa-cloud-upload-alt"></i> IPFS / Filecoin</span>
+      <span class="skill-tag"><i class="fas fa-robot"></i> Zapier / n8n</span>
+      <span class="skill-tag"><i class="fas fa-shield-alt"></i> Smart Contract Security</span>
+      <span class="skill-tag"><i class="fas fa-chart-simple"></i> Data Analytics</span>
+    </div>
+  </div>
+
+  <!-- Projects section: web3, email automation, plus extra project page simulation -->
+  <div id="projects">
+    <h2 class="section-title">🚀 Featured Projects</h2>
+    <div class="projects-grid">
+      <!-- Web3 Project Card -->
+      <div class="project-card">
+        <div class="project-icon"><i class="fab fa-ethereum"></i></div>
+        <h3>DeFi Lending Pool</h3>
+        <p>Decentralized lending protocol on Polygon. Built with Solidity, Foundry, and integrated with Chainlink oracles. Users earn yield from liquidity pools.</p>
+        <a href="#" class="project-link" id="web3Link">View Project <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <!-- Email Automation Project -->
+      <div class="project-card">
+        <div class="project-icon"><i class="fas fa-mail-bulk"></i></div>
+        <h3>Smart Email Orchestrator</h3>
+        <p>AI-powered email automation system that segments leads, sends personalized campaigns via AWS SES, and tracks conversion analytics with real-time dashboards.</p>
+        <a href="#" class="project-link" id="emailLink">Explore Automation <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <!-- Additional Project (FullStack + Blockchain explorer) -->
+      <div class="project-card">
+        <div class="project-icon"><i class="fas fa-chart-network"></i></div>
+        <h3>NFT Analytics Hub</h3>
+        <p>Cross-chain NFT data aggregator. Real-time rarity scoring, sales alerts, and portfolio tracker. Integrated with Alchemy and The Graph.</p>
+        <a href="#" class="project-link" id="nftLink">Discover Hub <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #4b5563;"><i class="fas fa-link"></i> Each project card links to a dedicated showcase page (demo simulation). More pages available below.</p>
+  </div>
+
+  <!-- Extra project showcase area: 2 dedicated subpages for email automation & web3 details -->
+  <div style="background: #eff6ff; border-radius: 1.5rem; padding: 1.5rem; margin: 1.5rem 0;">
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: 1rem;">
+      <div>
+        <h3 style="font-weight: 700;"><i class="fas fa-cube"></i> Web3 Deep Dive</h3>
+        <p style="color:#1e293b;">Full-stack DEX UI & smart contract audit portfolio →</p>
+      </div>
+      <a href="#" id="web3DetailBtn" class="btn-primary" style="background:#2563eb; padding: 0.6rem 1.4rem;">Web3 Project Hub →</a>
+    </div>
+    <hr style="margin: 1rem 0; opacity:0.3;">
+    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; align-items: center; gap: 1rem;">
+      <div>
+        <h3 style="font-weight: 700;"><i class="fas fa-envelope-open-dollar"></i> Email Automation Suite</h3>
+        <p style="color:#1e293b;">Workflow automation: drip campaigns + analytics + CRM integration</p>
+      </div>
+      <a href="#" id="emailDetailBtn" class="btn-primary" style="background:#2563eb; padding: 0.6rem 1.4rem;">Email Engine →</a>
+    </div>
+  </div>
+
+  <!-- Personality + resume / who I am beyond skills -->
+  <div id="personality">
+    <div class="personality-section">
+      <div class="personality-text">
+        <h3>✨ Beyond the code: my personality & drive</h3>
+        <p>I'm a builder, educator, and creative problem solver. Whether designing a gas-efficient smart contract or architecting a zero-touch email flow, I thrive at the intersection of logic and empathy. I believe technology should empower people — that's why I focus on clean UI, thorough documentation, and inclusive communities.</p>
+        <div class="traits">
+          <span class="trait">🧠 Curious learner</span>
+          <span class="trait">🤝 Collaborative mentor</span>
+          <span class="trait">🎯 Outcome-driven</span>
+          <span class="trait">🌍 Decentralization advocate</span>
+          <span class="trait">⚡ Automation enthusiast</span>
+        </div>
+        <p style="margin-top: 1.2rem;"><i class="fas fa-file-alt"></i> <strong>Resume highlights:</strong> Web3 lead at ChainLabs, winner of ETHGlobal 2024, built email automation handling 500k+ monthly sends.</p>
+      </div>
+      <div style="flex: 1; text-align: center;">
+        <i class="fas fa-lightbulb" style="font-size: 5rem; color: #fbbf24; background: #fffbeb; padding: 1rem; border-radius: 60px;"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- contact / social area with all socials linked -->
+  <div id="contact">
+    <h2 class="section-title">📬 Let's Connect</h2>
+    <div style="background: white; border-radius: 2rem; padding: 2rem; margin: 1rem 0 2rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 2rem; border: 1px solid #eef2ff;">
+      <div>
+        <p style="font-size: 1.1rem; font-weight: 500;">Find me everywhere — Let's build the future together 🚀</p>
+        <div style="display: flex; gap: 1.8rem; margin-top: 1rem; flex-wrap: wrap;">
+          <a href="https://github.com/eliotvance" target="_blank" style="color:#0f172a; font-size:1.8rem;"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/eliotvance" target="_blank" style="color:#0f172a; font-size:1.8rem;"><i class="fab fa-linkedin"></i></a>
+          <a href="https://twitter.com/eliotvance" target="_blank" style="color:#0f172a; font-size:1.8rem;"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/eliotvance" target="_blank" style="color:#0f172a; font-size:1.8rem;"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:eliot@web3automate.io" style="color:#0f172a; font-size:1.8rem;"><i class="fas fa-envelope"></i></a>
+          <a href="https://t.me/eliotvance" target="_blank" style="color:#0f172a; font-size:1.8rem;"><i class="fab fa-telegram"></i></a>
+        </div>
+      </div>
+      <div>
+        <span style="background:#eef2ff; padding: 0.5rem 1.2rem; border-radius: 40px; font-weight:500;"><i class="fas fa-map-pin"></i> Remote · UTC+1</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="footer-social">
+    <div class="social-icons" style="gap: 1.5rem;">
+      <a href="https://github.com/eliotvance" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/eliotvance" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://twitter.com/eliotvance" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com/eliotvance" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://discord.gg/example" target="_blank"><i class="fab fa-discord"></i></a>
+    </div>
+    <div class="copyright">© 2025 Eliot Vance — Smart Contracts • AI Automation • Web3 Innovation</div>
+  </div>
+</div>
+
+<!-- interactive simulation for "linked to other pages" modals / page links -->
+<script>
+  // Simulate dedicated pages for each main project: web3, email automation, and extra project showcasing
+  // Instead of separate HTML files, we create lightweight modal/alerts that showcase "page content" but it's essentially linking
+  // to a smooth internal detail display. For professional feel, we'll open a modal/browser simulation or new data attribute.
+  // However, requirement: "showcasing my web3 project, email automation and other project" linked pages.
+  // We'll provide simulated overlay modals that represent those "pages" and preserve same window. Better UX than external blank.
+
+  function openProjectPage(projectName, details) {
+    // Create a modal that acts like a dedicated subpage
+    const modalDiv = document.createElement('div');
+    modalDiv.style.position = 'fixed';
+    modalDiv.style.top = '0';
+    modalDiv.style.left = '0';
+    modalDiv.style.width = '100%';
+    modalDiv.style.height = '100%';
+    modalDiv.style.backgroundColor = 'rgba(0,0,0,0.75)';
+    modalDiv.style.backdropFilter = 'blur(4px)';
+    modalDiv.style.display = 'flex';
+    modalDiv.style.alignItems = 'center';
+    modalDiv.style.justifyContent = 'center';
+    modalDiv.style.zIndex = '2000';
+    modalDiv.style.fontFamily = "'Inter', sans-serif";
+
+    const card = document.createElement('div');
+    card.style.maxWidth = '550px';
+    card.style.width = '90%';
+    card.style.backgroundColor = 'white';
+    card.style.borderRadius = '2rem';
+    card.style.padding = '2rem';
+    card.style.boxShadow = '0 25px 40px -12px black';
+    card.style.position = 'relative';
+    card.innerHTML = `
+      <button id="closeModalBtn" style="position: absolute; top: 1rem; right: 1.5rem; background: none; border: none; font-size: 1.8rem; cursor: pointer;">&times;</button>
+      <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 0.5rem;">${projectName}</h2>
+      <div style="height: 4px; width: 70px; background: #2563eb; margin-bottom: 1.2rem;"></div>
+      <p style="margin-bottom: 1rem; color: #1e293b;">${details}</p>
+      <div style="background:#f8fafc; padding: 1rem; border-radius: 1rem; margin: 1rem 0;">
+        <i class="fas fa-link"></i> <strong>Live demo & repo:</strong> 
+        <a href="#" style="color:#2563eb;">github.com/eliotvance/${projectName.toLowerCase().replace(/\s/g,'')}</a>
+      </div>
+      <button class="btn-primary" id="closeInnerBtn" style="background:#0f172a;">Close Preview</button>
+    `;
+    modalDiv.appendChild(card);
+    document.body.appendChild(modalDiv);
+
+    const closeModal = () => modalDiv.remove();
+    card.querySelector('#closeModalBtn').addEventListener('click', closeModal);
+    card.querySelector('#closeInnerBtn').addEventListener('click', closeModal);
+    modalDiv.addEventListener('click', (e) => {
+      if(e.target === modalDiv) closeModal();
+    });
+  }
+
+  // Assign dedicated content per project
+  document.getElementById('web3Link').addEventListener('click', (e) => {
+    e.preventDefault();
+    openProjectPage('Web3 Lending Pool', '🔗 Decentralized finance protocol with dynamic APY, flash loans, and governance token. Built on Ethereum Sepolia. Smart contract fully audited. Integrated with WalletConnect.');
+  });
+  document.getElementById('emailLink').addEventListener('click', (e) => {
+    e.preventDefault();
+    openProjectPage('Email Orchestrator Engine', '📧 Intelligent automation: drag-and-drop workflow builder, AI-driven send-time optimization, real-time analytics dashboard. Handles 100k+ emails daily with segmentation and A/B testing.');
+  });
+  document.getElementById('nftLink').addEventListener('click', (e) => {
+    e.preventDefault();
+    openProjectPage('NFT Analytics Hub', '🖼️ Multi-chain NFT intelligence: rarity ranking, wash trade detection, real-time floor price alerts. Connect wallet to track portfolio across Ethereum, Polygon, and Solana.');
+  });
+  document.getElementById('web3DetailBtn').addEventListener('click', (e) => {
+    e.preventDefault();
+    openProjectPage('Full Web3 Ecosystem', '🎮 DEX Aggregator + Yield Farming Simulator. Includes custom subgraph, IPFS metadata storage, and on-chain governance proposal system. All repositories open source.');
+  });
+  document.getElementById('emailDetailBtn').addEventListener('click', (e) => {
+    e.preventDefault();
+    openProjectPage('Email Automation Master Suite', '⚙️ Scalable marketing automation with n8n + SendGrid. Includes lead scoring, transactional email templates, and weekly performance reports. Deployed on AWS Lambda.');
+  });
+  
+  // Additional personality / social links already hardcoded but ensure all socials open in new tab
+  const allSocials = document.querySelectorAll('.social-icons a, .footer-social .social-icons a, #contact a');
+  allSocials.forEach(link => {
+    if(link.getAttribute('href') && link.getAttribute('href').startsWith('http')) {
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    }
+  });
+
+  // mailto handling
+  const mailLink = document.querySelector('a[href^="mailto:"]');
+  if(mailLink) mailLink.setAttribute('target', '_blank');
+  
+  // make nav links smooth scroll
+  document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if(targetId === '#') return;
+      const targetEl = document.querySelector(targetId);
+      if(targetEl) {
+        e.preventDefault();
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+  
+  // "Contact Me" button smooth scroll
+  const contactBtn = document.querySelector('.btn-outline');
+  if(contactBtn && contactBtn.getAttribute('href') === '#contact') {
+    contactBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+  // primary explore projects goes to projects
+  const exploreBtn = document.querySelector('.btn-primary');
+  if(exploreBtn && exploreBtn.getAttribute('href') === '#projects') {
+    exploreBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.querySelector('#projects').scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+  
+</script>
+</body>
+</html>
+```
